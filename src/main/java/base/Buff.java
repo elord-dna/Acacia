@@ -8,4 +8,7 @@ public class Buff {
     private int critAddBase;
     private int hitAddPercent;
     private int hitAddBase;
+
+    private int level;
+    private int maxLevel;
 }
