@@ -1,7 +1,9 @@
 package base;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class BaseRole implements Cloneable {
@@ -19,6 +21,7 @@ public class BaseRole implements Cloneable {
     private int[] talent = {0,0,0,0,0,0,0,0,0,0,0,0};
     // 自身buff列表
     private List<Buff> buffList = new ArrayList<>();
+    private Map<String, Buff> buffMap = new HashMap<>();
 
     // 最终值
     private int fAttack;
@@ -28,6 +31,10 @@ public class BaseRole implements Cloneable {
     private double fStrain;
     private double fOvercome;
     private int fHaste;
+
+    public boolean hasBuff(String name) {
+        return buffMap.containsKey(name);
+    }
 
     Random random = new Random();
 

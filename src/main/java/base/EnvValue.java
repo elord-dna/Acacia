@@ -1,7 +1,9 @@
 package base;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class EnvValue {
     public int duration = 300;
@@ -11,6 +13,7 @@ public class EnvValue {
     public boolean thunder = false;
     public List setEffect = new ArrayList();
     public List<DeBuff> deBuffList = new ArrayList<>();
+    public Map<String, DeBuff> deBuffMap = new HashMap<>(); // 用map代替list便于查找
 
     double strainRequire = 0.35;
     double hitRequire = 1.2;
@@ -18,6 +21,10 @@ public class EnvValue {
         this.target = target;
         strainRequire = Util.getRequiredStrain(target);
     }
+    public boolean hasDeBuff(String name) {
+        return deBuffMap.containsKey(name);
+    }
+
     public double getStrainRequire() {
         return  strainRequire;
     }

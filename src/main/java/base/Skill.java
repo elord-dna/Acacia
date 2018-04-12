@@ -79,5 +79,9 @@ public abstract class Skill {
         this.damageCoe = damageCoe;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
     public abstract void onTrigger(BaseRole role, EnvValue env);
 }

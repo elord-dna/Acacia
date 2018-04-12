@@ -1,4 +1,4 @@
-package school.dj;
+package school.dj.buff;
 
 import base.BaseRole;
 import base.Buff;
