@@ -13,7 +13,7 @@ public abstract class Skill {
 
     private int baseDamageMin = 0;
     private int baseDamageMax = 0;
-    private double damageCoe = 0;
+    private double damageCoe = 0; // 系数
 
     public boolean isMustHit() {
         return mustHit;
@@ -29,6 +29,22 @@ public abstract class Skill {
     }
     public double getExOvercome() {
         return exOvercome;
+    }
+
+    public void setMustCrt(boolean mustCrt) {
+        this.mustCrt = mustCrt;
+    }
+
+    public void setExCrt(double exCrt) {
+        this.exCrt = exCrt;
+    }
+
+    public void setExCrtEff(double exCrtEff) {
+        this.exCrtEff = exCrtEff;
+    }
+
+    public void setExOvercome(double exOvercome) {
+        this.exOvercome = exOvercome;
     }
 
     public double getDamageAddPercent() {

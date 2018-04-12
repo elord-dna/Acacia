@@ -10,6 +10,7 @@ public class EnvValue {
     public boolean water = false;
     public boolean thunder = false;
     public List setEffect = new ArrayList();
+    public List<DeBuff> deBuffList = new ArrayList<>();
 
     double strainRequire = 0.35;
     double hitRequire = 1.2;
@@ -24,4 +25,7 @@ public class EnvValue {
         return hitRequire;
     }
 
+    public List<DeBuff> getDeBuffList() {
+        return deBuffList;
+    }
 }

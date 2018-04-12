@@ -1,6 +1,7 @@
 package base;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Util {
@@ -19,5 +20,23 @@ public class Util {
     }
     public static double getRequiredHit(int target) {
         return requiredHitMap.get(target);
+    }
+    // 检验是否存在同名buff
+    public static boolean checkExistBuff(List<Buff> buffList, Buff buff) {
+        for (Buff b : buffList) {
+            if (b.getName().equals(buff.getName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+    // 检验是否存在同名debuff
+    public static boolean checkExistDeBuff(List<DeBuff> deBuffList, DeBuff deBuff) {
+        for (DeBuff d : deBuffList) {
+            if (d.getName().equals(deBuff.getName())) {
+                return true;
+            }
+        }
+        return false;
     }
 }
